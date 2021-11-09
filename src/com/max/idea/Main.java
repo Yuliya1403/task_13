@@ -8,9 +8,7 @@ public class Main {
         byte temp = array [0];
         array [0]=array [4];
         array [4]= temp; // Задание 2
-        byte total = 0;
-        for ( int i = 0; i < array.length; i++) {
-        total+=array[i];}
-    System.out.println ("Сумма чисел массива: " + total) ; // Задание 3
+
+    System.out.println (array [0]+ array[2]) ; // Задание 3
     }
 }
