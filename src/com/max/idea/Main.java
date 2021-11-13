@@ -4,14 +4,21 @@ import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 5}; // Задание 1
-        int temp = array[0];
-        array[0] = array[array.length - 1];
-        array[array.length - 1] = temp; // Задание 2
-        int mid_index = Math.round(array.length / 2);
-        System.out.println(array[0] + array[mid_index]); // Задание 3
+        int x = 7;
+        int y = 14;
+        int z = 12;
+        int[] nums = {x,y,z}; //Задание 1
+        int result = 0;
+        for (int m : nums)
+            result += m;
+        //System.out.println("Значение среднего арифметического равно:" + result / nums.length); //Задание 2
+        int mid_index = (int)Math.floor((result / nums.length)/2); // Задание 3
+        if (mid_index > 3){
+            System.out.println("Программа выполнена корректно");}// Задание 4
+
     }
     }
+
 
 
 
