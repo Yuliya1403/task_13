@@ -4,43 +4,35 @@ import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
-        int type = 2;
-      String typeString = null;
-        switch (type) {
-            case 1 : typeString = "Масса";
-                break;
-            case 2 : typeString = "Расстояние";
-                break;
-        }
-           System.out.println(typeString); //Задание 1
-
-        int unit = 1;
-        String unitString = null;
-        switch (unit) {
-            case 1:
-                unitString = "Метр";
-                break;
-            case 2:
-                unitString = "Миля";
-                break;
-            case 3:
-                unitString = "Ярд";
-                break;
-            case 5:
-                unitString = "Фут";
-                break;
-        }
-            System.out.println(unitString);//Задание 2
         int x = 10;
-        String answer = null;
-        if (x == 10)
-            answer = "Метры: 10 , Мили: 0.006, Ярды: 10.94, Футы: 32.81";
-        else
-            answer = "Неверный ответ";
-            System.out.println(answer);//Задание 3
+        int y = 12;
+        int z = 2;
+        int[] arrays = {1, 4, 2};
+        for (int i = 0; i < arrays.length; i++) {
+            if (arrays[i] == x || arrays[i] == y || arrays[i] == z) {
+                continue;
+            }
+            for (int i2 = 0; i2 < arrays.length; i2++) {
+                if (arrays[i2] == x || arrays[i2] == y || arrays[i2] == z) {
+                    continue;
+                }
+                for (int i3 = 0; i3 < arrays.length; i3++) {
+                    if (arrays[i3] == x || arrays[i3] == y || arrays[i3] == z) {
+                        continue;
+                    }
+                }
+            }
         }
+        System.out.println("Данное значение имеется в константах");
+    }
+}
 
-        }
+
+
+
+
+
+
 
 
 
