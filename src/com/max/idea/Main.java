@@ -1,31 +1,25 @@
 package com.max.idea;
 
-//import java.sql.SQLOutput;
+//import javax.swing.*;
+import java.sql.SQLOutput;
 import java.util.Scanner;
-public class Main  {
+public class Main {
     public static void main(String[] args) {
-        int x ;
-        int y ;
-        int z ;
-        //int sum = 0;
-        Scanner reader = new Scanner(System.in);
-        System.out.print("Enter tree numbers: ");
-        x = reader.nextInt();
-        y = reader.nextInt();
-        z = reader.nextInt();
-        // Задание 1
-        {
-            int[] nums = {x,y,z};
-            int result = 0;
-            for (int m : nums)
-                result += m;
-            System.out.println("Значение среднего арифметического равно:" + result / nums.length);// Задание 2
-            int mid_index = (int)Math.floor((result / nums.length)/2); // Задание 3
-            if (mid_index > 3){
-                System.out.println("Программа выполнена корректно");}// Задание 4
+        int num;
+        int sum = 0;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input a number: ");
+        num = in.nextInt();
+        for (int i = 1; i <= num; i += 2) {
+            sum = sum + i;
         }
+        System.out.println(sum);
+
     }
+
 }
+
+
 
 
 
