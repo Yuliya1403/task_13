@@ -5,19 +5,26 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int num;
-        int sum = 0;
-        Scanner in = new Scanner(System.in);
-        System.out.print("Input a number: ");
-        num = in.nextInt();
-        for (int i = 1; i <= num; i += 2) {
-            sum = sum + i;
+        Scanner input = new Scanner(System.in);
+        int x = 10;
+        int y = 12;
+        int z = 2;
+        System.out.println("Enter array length: ");
+        int size = input.nextInt();
+        int array[] = new int[size];
+        System.out.println("Insert array elements: { }");
+        for (int i = 0; i < array.length; i++){
+            if (array[i] == x || array[i] == y || array[i] == z) ;
+            System.out.println("Данное значение имеется в константах");
+            }
         }
-        System.out.println(sum);
-
     }
 
-}
+
+
+
+
+
 
 
 
