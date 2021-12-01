@@ -5,17 +5,23 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int x = 10;
-        int y = 12;
-        int z = 2;
-        System.out.println("Enter array length: ");
-        int size = input.nextInt();
-        int array[] = new int[size];
-        System.out.println("Insert array elements: { }");
-        for (int i = 0; i < array.length; i++){
-            if (array[i] == x || array[i] == y || array[i] == z) ;
-            System.out.println("Данное значение имеется в константах");
+        int x ;
+        int y ;
+        int z ;
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Enter tree numbers: ");
+        x = reader.nextInt();
+        y = reader.nextInt();
+        z = reader.nextInt(); // Задание 1
+        {
+            int [] nums = {x,y,z};
+            int result = 0;
+            for (int m : nums)
+                result += m;
+            System.out.println("Значение среднего арифметического равно:" + result % nums.length);// Задание 2
+            int mid_index = (int)Math.floor((result % nums.length)%2); // Задание 3
+            if (mid_index > 3){
+                System.out.println("Программа выполнена корректно");}// Задание 4
             }
         }
     }
