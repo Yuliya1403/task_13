@@ -5,26 +5,44 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int x ;
-        int y ;
-        int z ;
+        double num1;
+        double num2;
+        double result;
+        char smb;
         Scanner reader = new Scanner(System.in);
-        System.out.print("Enter tree numbers: ");
-        x = reader.nextInt();
-        y = reader.nextInt();
-        z = reader.nextInt(); // Задание 1
-        {
-            int [] nums = {x,y,z};
-            int result = 0;
-            for (int m : nums)
-                result += m;
-            System.out.println("Значение среднего арифметического равно:" + result % nums.length);// Задание 2
-            int mid_index = (int)Math.floor((result % nums.length)%2); // Задание 3
-            if (mid_index > 3){
-                System.out.println("Программа выполнена корректно");}// Задание 4
-            }
+        System.out.print("Enter two numbers:");
+        num1 = reader.nextInt();
+        num2 = reader.nextInt();
+        System.out.print("\nEnter an operator (+, -, *, /): ");
+        smb = reader.next().charAt(0);
+        switch (smb) {
+            case '+': result = num1 + num2;
+                break;
+            case '-': result = num1 - num2;
+                break;
+            case '*': result= num1 * num2;
+                break;
+            case '/':
+                if (num2 == 0) {
+                    System.out.printf("Делить на ноль нельзя");
+                    return;
+                } else {
+                    result = num1 / num2;
+                }
+                break;
+            default:
+                System.out.printf("Error! Enter correct operator");
+                return;
+        }
+        if (num2 != 0) {
+            System.out.print("\nThe result is given as follows:\n");
+            System.out.printf(num1 + " " + smb + " " + num2 + " = " + result);
         }
     }
+
+    }
+
+
 
 
 
