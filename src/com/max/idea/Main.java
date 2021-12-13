@@ -6,27 +6,40 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int x = 10;
-        int y = 12;
-        int z = 2;
-        System.out.println("Enter array length: ");
-        int size = input.nextInt();
-        int array[] = new int[size];
-        System.out.println("Insert array elements: ");
-        for (int i = 0; i < array.length; i++) {
-            array[i] = input.nextInt();
+        System.out.println("Enter numbers length: ");
+        double numbers[] = new double[input.nextInt()];
+        System.out.println("Insert numbers elements: ");
+        for (int count = 0; count < numbers.length; count++) {
+            numbers[count] = input.nextDouble();
+            System.out.print("Inserted array elements:");
         }
-        System.out.print("Inserted array elements:");
-        for (int i = 0; i < size; i++) {
-            System.out.print(" " + array[i]);
-            {
-                if (array[i] == x |array[i] == y |array[i] ==z ){
-                    System.out.println("Данное значение имеется в константах");
+        {
+            double average = 0;
+            if (numbers.length > 0) {
+                double sum = 0;
+                double result = 0;
+                for (int g = 0; g < numbers.length; g++) {
+                    sum += numbers[g];
+                }
+                average = sum / numbers.length;
+                for (int f = 0; f < numbers.length; f++) {
+                    result = numbers[f] * average;
+                    System.out.println("умножение на среднее арифметическое" + result);
                 }
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
