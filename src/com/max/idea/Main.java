@@ -6,29 +6,27 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int x = 10;
-        int y = 12;
-        int z = 2;
-        System.out.println("Enter array length: ");
-        int size = input.nextInt();
-        int array[] = new int[size];
-        System.out.println("Insert array elements: ");
-        for (int i = 0; i < array.length; i++) {
-            array[i] = input.nextInt();
+        System.out.println("Выберите что переводить: 1 - масса, 2 - расстояние");
+        int type = input.nextInt();
+        if (type == 1) {
+            System.out.println("Выберите единицу измерения: 1 - граммы, 2 - килограммы, 3 - центнер, 4 - тонна");
+        } else if (type == 2) {
+            System.out.println("Выберите единицу измерения:  1 - метр, 2 - миля, 3 - ярд, 4 - фут");
         }
-        switch (size) {
-            case 1: for (int i = 0; i < size; i++)
-                array[i] = x;
-            break;
-            case 2: for (int i = 0; i < size; i++)
-                array[i] = y;
-                break;
-            case 3: for (int i = 0; i < size; i++)
-                array[i] = z;
-        }
-                    System.out.println("Данное значение имеется в константах");
-                }
+        int sum = input.nextInt();
+        if (sum < 4) {
+            System.out.println("Введите число");
+        } else if (sum > 0) {
+            System.out.println("Введите число");
             }
+            double variable = input.nextInt();
+            {
+                System.out.println(variable);
+            }
+        }
+    }
+
+
 
 
 
