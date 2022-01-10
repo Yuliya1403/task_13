@@ -15,7 +15,7 @@ public class Main {
         result = str.contains("Java");
         result2 = str.startsWith("I like");
         result3 = str.endsWith("!!!");
-        if (result == result2);
+        if (result == result2 == result3);
             result4 = str.toUpperCase();
             System.out.println(result4);
         result5 = str.replace("a","o");
