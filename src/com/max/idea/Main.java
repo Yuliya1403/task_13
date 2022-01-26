@@ -5,24 +5,47 @@ import java.util.Locale;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        String str = "I love java 8 Я люблю java 14 core1";
-        int count = 0;
-        String result;
-        //String result;
-        str = str.replaceAll("[а-яА-Я\\d]", "");
-        result = str.replaceAll("[\\s] +", " ");
-        System.out.println(result);
-            if (result.length() != 0) {
-                count++;
-                for ( int i = 0;i < result.length();i++) {
-                    if (result.charAt(i) == ' ') {
-                        count++;
-                    }
-                }
+
+            char us_dollar_sym = 36;
+            char rub_sym = 82;
+            String us_dollar = "Доллары";
+            String rub = "Рубли";
+            double rate = 0;
+            Scanner in = new Scanner(System.in);
+            String inType = null;
+            System.out.printf("Введите курс доллара ");
+            double dollar = in.nextDouble();
+
+            System.out.printf("Введите сумму в рублях ");
+            double input = in.nextDouble();
+
+            {
+                rate = input / dollar;
+                System.out.printf( "%s" + input + " %s = %.2f\n", (char)rub_sym , us_dollar, rate);
             }
-        System.out.println( count + " слов");
+        }
     }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
