@@ -5,26 +5,48 @@ import java.util.Locale;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        int[] array = new int[15];
 
-            char us_dollar_sym = 36;
-            char rub_sym = 82;
-            String us_dollar = "Доллары";
-            String rub = "Рубли";
-            double rate = 0;
-            Scanner in = new Scanner(System.in);
-            String inType = null;
-            System.out.printf("Введите курс доллара ");
-            double dollar = in.nextDouble();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ((int) (Math.random() * 41) - 20);
+        }
 
-            System.out.printf("Введите сумму в рублях ");
-            double input = in.nextDouble();
-
-            {
-                rate = input / dollar;
-                System.out.printf( "%s" + input + " %s = %.2f\n", (char)rub_sym , us_dollar, rate);
+        int maxValue = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > maxValue) {
+                maxValue = array[i];
             }
         }
-    }
+        System.out.println(maxValue);
+
+        int minValue = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < minValue) {
+                minValue = array[i];
+            }
+        }
+        System.out.println(minValue);
+
+        int maxValueAbs = Math.abs(maxValue);
+        int minValueAbs = Math.abs(minValue);
+
+        if (maxValueAbs >= minValueAbs) {
+            System.out.println(maxValueAbs);
+        } else {
+            System.out.println(minValueAbs);
+        }
+
+                }
+            }
+
+
+
+
+
+
+
+
+
 
 
 
