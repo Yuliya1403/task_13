@@ -5,39 +5,30 @@ import java.util.Locale;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        double num1;
-        double num2;
-        double result = 0;
-        char smb;
-        Scanner reader = new Scanner(System.in);
-        System.out.print("Enter two numbers:");
-        num1 = reader.nextDouble();
-        num2 = reader.nextDouble();
-        System.out.print("\nEnter an operator (+, -, *, /): ");
-        smb = reader.next().charAt(0);
-        switch (smb) {
-            case '+': result = num1 + num2;
-                break;
-            case '-': result = num1 - num2;
-                break;
-            case '*': result= num1 * num2;
-                break;
-            case '/':
-                if (num2 == 0) {
-                    System.out.printf("Делить на ноль нельзя");
-                    System.exit(0);
-                } else {
-                    result = num1 / num2;
-                }
-                break;
-            default:
-                System.out.printf("Error! Enter correct operator");
-                System.exit(0);;
-        }
-            System.out.print("\nThe result is given as follows:\n");
-            System.out.printf(num1 + " " + smb + " " + num2 + " = " + result);
+        char us_dollar_sym = 36;
+        char rub_sym = 82;
+        String us_dollar = "Доллары";
+        String rub = "Рубли";
+        double rate = 0;
+        Scanner in = new Scanner(System.in);
+        String inType = null;
+        System.out.printf("Введите курс доллара ");
+        double dollar = in.nextDouble();
+
+        System.out.printf("Введите сумму в рублях ");
+        double input = in.nextDouble();
+
+        {
+            rate = input / dollar;
+            System.out.printf( "%s" + input + " %s = %.2f\n", (char)rub_sym , us_dollar, rate);
         }
     }
+}
+
+
+
+
+
 
 
 
