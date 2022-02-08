@@ -5,25 +5,71 @@ import java.util.Locale;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        char us_dollar_sym = 36;
-        char rub_sym = 82;
-        String us_dollar = "Доллары";
-        String rub = "Рубли";
-        double rate = 0;
-        Scanner in = new Scanner(System.in);
-        String inType = null;
-        System.out.printf("Введите курс доллара ");
-        double dollar = in.nextDouble();
+        int result = 0;
+        int num1;
+        int num2;
+        char smb;
+        num1 = ((int) (Math.random() * 9));
+        num2 = ((int) (Math.random() * 9));
+        Scanner input = new Scanner(System.in);
+        System.out.println("Выберите тип уравнения: 1 - x в начале, 2 - x в середине, 3 - x в равенстве");
+        int type = input.nextInt();
+        if (type == 1) {
+            System.out.print("\nВведите знак (+, -): ");
+            smb = input.next().charAt(0);
+            switch (smb) {
+                case '+':
+                    result = num2 - num1;
+                    break;
+                case '-':
+                    result = num1 + num2;
+                    break;
+                default:
+                    System.out.printf("Неккоректно введены данные");
+            }
 
-        System.out.printf("Введите сумму в рублях ");
-        double input = in.nextDouble();
+            System.out.println("первое число равно:" + num1 + " второе число равно:" + num2 + ", результат:" + result);
 
-        {
-            rate = input / dollar;
-            System.out.printf( "%s" + input + " %s = %.2f\n", (char)rub_sym , us_dollar, rate);
+        }
+        if (type == 2) {
+            System.out.print("\nВведите знак (+, -): ");
+            smb = input.next().charAt(0);
+            switch (smb) {
+                case '+':
+                    result = num2 - num1;
+                    break;
+                case '-':
+                    result = num1 + num2;
+                    break;
+                default:
+                    System.out.printf("Неккоректно введены данные");
+            }
+
+            System.out.println(" первое число равно:" + num1 + " второе число равно:" + num2 + ", результат:" + result);
+
+        }
+        if (type == 3) {
+            System.out.print("\nВведите знак (+, -): ");
+            smb = input.next().charAt(0);
+            switch (smb) {
+                case '+':
+                    result = num2 + num1;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                default:
+                    System.out.printf("Неккоректно введены данные");
+            }
+
+            System.out.println("первое число равно:" + num1 + " второе число равно:" + num2 + " результат:" + result);
         }
     }
 }
+
+
+
+
 
 
 
