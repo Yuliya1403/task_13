@@ -5,20 +5,25 @@ import java.util.Locale;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int num;
-        int sum = 0;
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите число: ");
-        num = in.nextInt();
-        for (int i = 1; i <= num; i += 2) {
-            sum = sum + i;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Введите длину массива: ");
+        int size = input.nextInt();
+        double array[] = new double[size];
+        System.out.println("Введите элементы массива: ");
+        for (int i = 0; i < size; i++) {
+            array[i] = input.nextDouble();
         }
-        System.out.println(sum);
-
+        for (int i = 0; i < size; i++) {
+            double average = 0;
+            double sum = 0;
+            double result = 0;
+            sum += array[i];
+            average = sum / array.length;
+            result = array[i] * average;
+            System.out.println("умножение на среднее арифметическое: " + result);
+        }
     }
 }
-
-
 
 
 
