@@ -4,23 +4,20 @@ import java.util.Locale;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int x = 10;
-        int y = 12;
-        int z = 2;
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter array length: ");
-        int size = input.nextInt();
-        int array[] = new int[size];
-        System.out.println("Insert array elements: ");
-        for (int i = 0; i < array.length; i++) {
-            array[i] = input.nextInt();
-        }
-
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == x | array[i] == y | array[i] == z) {
-                System.out.println("Данное значение имеется в константах");
-                break;
-            }
-        }
+        boolean result;
+        boolean result2;
+        boolean result3;
+        String result4;
+        String result5;
+        String str = "I like Java!!!";
+        result = str.contains("Java");
+        result2 = str.startsWith("I like");
+        result3 = str.endsWith("!!!");
+        if (result == true && result2 == true && result3 == true)
+            System.out.println(str.toUpperCase());
+        result4 = str.replace("a","o");
+        result5 = result4.substring(7, 11);
+        System.out.println(result5);
     }
 }
+
