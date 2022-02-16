@@ -1,156 +1,26 @@
 package com.max.idea;
-//import javax.swing.*;
 import java.sql.SQLOutput;
 import java.util.Locale;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        int x = 10;
+        int y = 12;
+        int z = 2;
         Scanner input = new Scanner(System.in);
-        System.out.println("Введите длину массива: ");
+        System.out.println("Enter array length: ");
         int size = input.nextInt();
-        double array[] = new double[size];
-        System.out.println("Введите элементы массива: ");
-        for (int i = 0; i < size; i++) {
-            array[i] = input.nextDouble();
+        int array[] = new int[size];
+        System.out.println("Insert array elements: ");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = input.nextInt();
         }
-        for (int i = 0; i < size; i++) {
-            double average = 0;
-            double sum = 0;
-            double result = 0;
-            sum += array[i];
-            average = sum / array.length;
-            result = array[i] * average;
-            System.out.println("умножение на среднее арифметическое: " + result);
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == x | array[i] == y | array[i] == z) {
+                System.out.println("Данное значение имеется в константах");
+                break;
+            }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
