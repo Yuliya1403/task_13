@@ -1,25 +1,26 @@
 package com.max.idea;
 import java.sql.SQLOutput;
-import java.util.Locale;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-         String str = "I love java 8 Я люблю java 14 core1";
-        int count = 0;
-        String result;
-        //String result;
-        str = str.replaceAll("[а-яА-Я\\d]", "");
-        result = str.replaceAll("[\\s] +", " ");
-        System.out.println(result);
-        if (result.length() != 0) {
-            count++;
-            for ( int i = 0;i < result.length();i++) {
-                if (result.charAt(i) == ' ') {
-                    count++;
-                }
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Введите строку");
+
+        String str = input.nextLine();
+        String[] words = str.split(" ");
+        String result = "";
+
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].matches("[A-Za-z]+")) {
+                result = result + words[i] + " ";
             }
         }
-        System.out.println( count + " слов");
+
+        System.out.println("Слова, состоящие только из латиницы");
+        System.out.println(result);
+        System.out.println("Kоличество этих слов");
+        System.out.println(result.split(" ").length);
     }
 }
 
